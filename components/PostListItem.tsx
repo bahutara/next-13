@@ -11,20 +11,20 @@ export function PostListItem(props: { post: ListItem }) {
   return (
     <Link
       href={`/post/${post.id}`}
-      className='block hover:bg-gray-50 px-4 py-4 sm:px-6"'
+      className='sm:px-6" block px-4 py-4 hover:bg-gray-50'
     >
       <article>
-        <div className='flex items-center justify-between'>
-          <p className='truncate text-sm font-medium text-indigo-600'>
+        <div className="flex items-center justify-between">
+          <p className="truncate text-sm font-medium text-indigo-600">
             {post.title}
           </p>
         </div>
-        <div className='mt-2 sm:flex sm:justify-between'>
-          <div className='sm:flex'></div>
-          <div className='mt-2 flex items-center text-sm text-gray-500 sm:mt-0'>
+        <div className="mt-2 sm:flex sm:justify-between">
+          <div className="sm:flex"></div>
+          <div className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
             <CalendarIcon
-              className='mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400'
-              aria-hidden='true'
+              className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+              aria-hidden="true"
             />
             <p>
               Added on{" "}
@@ -41,10 +41,10 @@ export function PostListItem(props: { post: ListItem }) {
 
 PostListItem.Skeleton = function PostListItemSkeleton() {
   return (
-    <div className='block hover:bg-gray-50 px-4 py-4 sm:px-6"'>
-      <div className='h-4 w-1/2 bg-gray-300 rounded animate-pulse'></div>
-      <div className='mt-2'>
-        <div className='h-2 w-1/2 bg-gray-300 rounded animate-pulse'></div>
+    <div className='sm:px-6" block px-4 py-4 hover:bg-gray-50'>
+      <div className="h-4 w-1/2 animate-pulse rounded bg-gray-300"></div>
+      <div className="mt-2">
+        <div className="h-2 w-1/2 animate-pulse rounded bg-gray-300"></div>
       </div>
     </div>
   );

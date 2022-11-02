@@ -7,7 +7,7 @@ import { rsc } from "../server-rsc/trpc";
 
 function PostListSkeleton() {
   return (
-    <ul role='list' className='divide-y divide-gray-200'>
+    <ul role="list" className="divide-y divide-gray-200">
       {Array.from({ length: 10 }).map((_, i) => (
         <PostListItem.Skeleton key={i} />
       ))}
@@ -31,20 +31,20 @@ function PostListRSC() {
 
 export default function Page() {
   return (
-    <div className='space-y-6 p-4'>
+    <div className="space-y-6 p-4">
       <header>
         <h1>Overview</h1>
-        <div className='bg-white shadow rounded-md p-4 prose'>
+        <div className="prose rounded-md bg-white p-4 shadow">
           <p>
             First posts are fetched with RSC, the infinite scrolling is through
             client
           </p>
           <p>
             <a
-              href='https://github.com/trpc/next-13'
-              className='text-indigo-500 underline'
-              target='_blank'
-              rel='noreferrer'
+              href="https://github.com/trpc/next-13"
+              className="text-indigo-500 underline"
+              target="_blank"
+              rel="noreferrer"
             >
               View source on GitHub
             </a>
@@ -58,7 +58,7 @@ export default function Page() {
       <section>
         <h2>All posts</h2>
 
-        <div className='overflow-hidden bg-white shadow rounded-md'>
+        <div className="overflow-hidden rounded-md bg-white shadow">
           <Suspense fallback={<PostListSkeleton />}>
             <PostListRSC />
           </Suspense>

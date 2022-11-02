@@ -30,7 +30,7 @@ export function ClientProvider(props: { children: React.ReactNode }) {
         }),
       ],
       transformer: superjson,
-    }),
+    })
   );
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>

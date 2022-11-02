@@ -23,7 +23,7 @@ export function PostList(props: {
       refetchOnMount: false,
       staleTime: Infinity,
       initialData,
-    },
+    }
   );
 
   const fetchNextPageRef = useRef(query.fetchNextPage);
@@ -36,7 +36,7 @@ export function PostList(props: {
   }, [isLoadMoreVisible, query.hasNextPage, query.isFetching]);
 
   return (
-    <ul role='list' className='divide-y divide-gray-200'>
+    <ul role="list" className="divide-y divide-gray-200">
       {query.data?.pages.map((page, index) => (
         <Fragment key={index}>
           {page.items.map((post) => (
@@ -54,7 +54,7 @@ export function PostList(props: {
               query.fetchNextPage();
             }}
             className={
-              "p-4 w-full cursor-pointer" +
+              "w-full cursor-pointer p-4" +
               (!query.hasNextPage ? " opacity-50" : "")
             }
           >
