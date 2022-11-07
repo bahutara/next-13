@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { prisma } from "../prisma";
-import { publicProcedure, router } from "../trpc";
+import { privateProcedure, /*publicProcedure,*/ router } from "../trpc";
 
 export const classroomRouter = router({
-  getClassroom: publicProcedure
+  getClassroom: privateProcedure
     .input(z.object({ classroomId: z.string() }))
     .query(async ({ input }) => {
       const classroom = await prisma.classroom.findUnique({

@@ -1,13 +1,13 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 import { trpc } from "~/client/trpcClient";
 import { Inputs } from "~/shared/utils";
 
 export function CreatePostForm() {
   const addPost = trpc.post.add.useMutation();
 
-  const router = useRouter();
+  //const router = useRouter();
 
   return (
     <form
@@ -29,7 +29,6 @@ export function CreatePostForm() {
         };
         try {
           await addPost.mutateAsync(input);
-          router.refresh();
 
           $form.reset();
         } catch (cause) {

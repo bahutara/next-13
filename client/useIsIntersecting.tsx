@@ -12,7 +12,7 @@ export function useIsIntersecting<TElement extends HTMLElement>() {
       return;
     }
     const observer = new IntersectionObserver(([entry]) =>
-      setIsIntersecting(entry.isIntersecting),
+      setIsIntersecting(entry!.isIntersecting)
     );
     observer.observe(ref.current);
     return () => {
