@@ -17,6 +17,7 @@ export function createHydrateClient(opts: { transformer?: DataTransformer }) {
       }
       return state;
     }, [state]);
+
     return <Hydrate state={transformedState}>{children}</Hydrate>;
   };
 }
